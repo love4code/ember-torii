@@ -1,3 +1,6 @@
-<h2 id="title">Welcome to Ember</h2>
-
+<h2 id="title">Authentication Starter Project</h2>
+  {{log session.currentUser}}
+{{#if session.isAuthenticated}}
+   <button {{action 'logout'}}>Logout</button>
+ {{/if}}
 {{outlet}}

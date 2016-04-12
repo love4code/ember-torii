@@ -4,6 +4,11 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'my-auth-test',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    firebase: 'https://mover-app.firebaseio.com/',
+    torii: {
+      sessionServiceName: 'session'
+    },
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
